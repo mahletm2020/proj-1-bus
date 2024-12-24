@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fffaf0; /* Soft cream background */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-top: 50px;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #FFD700; /* Golden accent */
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input.form-control, select.form-select {
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        input.form-control:focus, select.form-select:focus {
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+            border-color: #FFD700;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #e6be00;
+            border-color: #e6be00;
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Edit User</h1>
+    <form action="#" method="POST"> <!-- Dynamic action and method are placeholders -->
+        <!-- @csrf --> <!-- CSRF Token placeholder -->
+        <!-- @method('PUT') --> <!-- Method override placeholder -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="" placeholder="Enter user name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="" placeholder="Enter user email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="" placeholder="Enter user phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="role" class="form-label">User Type</label>
+            <select class="form-select" id="role" name="role" required>
+                <option value="operation_officer">Operations Officer</option>
+                <option value="driver">Driver</option>
+                <option value="ticket_officer">Ticket Officer</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Update User</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
