@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bus Ticket Booking</title>
+    <style>
+        .btn-golden {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: white;
+        }
+
+        .btn-golden:hover {
+            background-color: #e6be00;
+            border-color: #e6be00;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div class="text-yellow-300 text-2xl font-bold">Bus Ticketing</div>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-700">Login</a>
+                <a href="#" class="text-gray-700">Signup</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative">
+        <img src="your-image-url.jpg" alt="" class="w-full h-96 object-cover" />
+        <div style="background-color: #c29964;" class="absolute inset-0 opacity-50"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center">
+            <h1 class="text-white text-3xl md:text-5xl font-bold">FIND NEXT PLACE TO VISIT</h1>
+            <p class="text-white mt-4 text-lg md:text-xl">Discover amazing places and exclusive deals.</p>
+        </div>
+    </header>
+
+    <main class="mx-auto mt-8 px-4">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold text-left mb-4">Online Bus Ticket</h2>
+            <form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div>
+                    <label class="font-bold">From:</label>
+                    <input type="text" placeholder="From" class="border border-gray-300 rounded mt-3 p-2 w-full" />
+                </div>
+                <div>
+                    <label class="font-bold">To:</label>
+                    <input type="text" placeholder="To" class="border border-gray-300 rounded mt-3 p-2 w-full" />
+                </div>
+                <div>
+                    <label class="font-bold">Journey Date:</label>
+                    <input type="date" class="border border-gray-300 mt-3 p-2 w-full" />
+                </div>
+                <div>
+                    <label class="font-bold">Return Date:</label>
+                    <input type="date" class="border border-gray-300 mt-3 p-2 w-full" />
+                </div>
+                <div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center mt-4">
+                    <button style="color: white;"
+                        class="btn btn-golden mt-3 w-full rounded-md md:w-1/2 h-11 lg:w-1/3">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="container mx-auto mt-8">
+            <h2 class="text-2xl font-bold text-center mb-6">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div style="background-color: #fafafa;" class="text-black p-6 rounded-lg shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h18M3 12h18M3 21h18" />
+                        </svg>
+                        <h3 class="ml-2 text-xl font-semibold">Affordable Pricing</h3>
+                    </div>
+                    <p>We believe that quality travel shouldn't break the bank. Enjoy competitive pricing with no hidden
+                        fees.</p>
+                </div>
+                <div style="background-color: #fafafa;" class="text-black p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m4-4H8" />
+                        </svg>
+                        <h3 class="ml-2 text-xl font-semibold">Customer-Centric Service</h3>
+                    </div>
+                    <p>Our dedicated customer service team is available 24/7 to assist you with any inquiries.</p>
+                </div>
+                <div style="background-color: #fafafa;" class="text-black p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h18M3 12h18M3 21h18" />
+                        </svg>
+                        <h3 class="ml-2 text-xl font-semibold">Flexible Booking</h3>
+                    </div>
+                    <p>Plans change and we understand that. Our friendly platform allows easy booking modifications and
+                        cancellations.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto mt-8">
+            <div style="background-color: #fffffe;"
+                class="flex flex-col lg:flex-row text-black rounded-lg shadow-lg overflow-hidden">
+                <div class="p-6 flex-1">
+                    <h2 class="text-2xl font-bold mb-4">ABOUT US</h2>
+                    <p>At Golden Way, we strive to make travel easier and more accessible for everyone. We envision a
+                        world where transportation is not just a means to an end, but a part of the journey that
+                        enhances your travel experience. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+                        adipisci aspernatur nulla, soluta incidunt eligendi voluptatibus quam alias ipsa, quisquam
+                        repellat praesentium perferendis similique.</p>
+                </div>
+                <div class="flex-1">
+                    <img src="image/IMG_5840.jpg" alt="Bus Image" class="w-full h-full object-cover" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <header class="relative py-10">
+        <div class="container mx-auto text-center">
+            <h1 class="text-xl md:text-3xl font-bold text-gray-800">Contact Us</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto -mt-2 px-4">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-xl font-semibold text-left mb-4">Get in Touch</h2>
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="font-bold">Name:</label>
+                        <input type="text" placeholder="Your Name"
+                            class="border border-gray-300 rounded mt-3 p-2 w-full" required />
+                    </div>
+                    <div>
+                        <label class="font-bold">Email:</label>
+                        <input type="email" placeholder="Your Email"
+                            class="border border-gray-300 rounded mt-3 p-2 w-full" required />
+                    </div>
+                    <div class="col-span-1">
+                        <label class="font-bold">Message:</label>
+                        <textarea placeholder="Your Message" class="border border-gray-300 rounded mt-3 p-2 w-full h-32"
+                            required></textarea>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <button style="color:white;" class="btn btn-golden w-full md:w-1/3 rounded-md h-11">Send
+                        Message</button>
+                </div>
+            </form>
+
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-center mb-4">Follow Us</h2>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-gray-900">
+                        <img class="h-8 w-8" src="image/facebook.png">
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900">
+                        <img class="h-8 w-8" src="image/Telegram.png">
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900">
+                        <img class="h-8 w-8" src="image/twitter.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-black text-center p-4 mt-8">
+        <p>&copy; 2024 Bus Ticket Booking. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
