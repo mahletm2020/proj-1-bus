@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bus Ticket Booking</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <main class="mx-auto mt-8 px-4">
+
+        <div class="mb-6 flex justify-center">
+            <div class="flex w-full md:w-1/2 lg:w-1/3">
+                <input type="text" placeholder="Search for buses..."
+                    class="border border-gray-300 rounded-l-lg p-2 w-full" />
+                <button style="background-color: #e3a24c;" class="text-white rounded-r-lg px-4">Search</button>
+            </div>
+        </div>
+
+        <div class="container mx-auto mt-8">
+            <h2 class="text-2xl font-bold text-center mb-6">AVAILABLE BUSES</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/tourist.jpg" alt="Selam Bus" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Tourist</h2>
+                        <p class="text-gray-700 font-light">Passenger Capacity: 20</p>
+                        <p class="text-gray-700 font-light">Facilities: Wi-Fi, AC</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/standard.jpg" alt="Habesha Bus" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Standard</h2>
+                        <p class="text-gray-700 font-light">Passenger Capacity: 25</p>
+                        <p class="text-gray-700 font-light">Facilities: Wi-Fi, AC</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/tourist.jpg" alt="Starbus" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Luxury</h2>
+                        <p class="text-gray-700 font-light">Passenger Capacity: 35</p>
+                        <p class="text-gray-700 font-light">Facilities: Wi-Fi, Entertainment System</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/coach.jpg" alt="Selam Bus" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Coach Buses</h2>
+                        <p class="text-gray-700 font-light">Passenger Capacity: 30</p>
+                        <p class="text-gray-700 font-light">Facilities: Wi-Fi</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/mini.jpg" alt="Habesha Bus" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Mini Buses</h2>
+                        <p class="text-gray-700 font-light">Passenger Capacity: 20</p>
+                        <p class="text-gray-700 font-light">Facilities: Food, WI-FI</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="image/standard.jpg" alt="Starbus" class="w-full h-56 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Customizable Tour Buses</h2>
+                        <p class="text-gray-700 font-light">Passenger Capacity: 40</p>
+                        <p class="text-gray-700 font-light">Facilities: Wi-Fi, AC, Entertainment System</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
