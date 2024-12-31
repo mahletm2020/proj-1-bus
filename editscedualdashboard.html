@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lemon+Milk&display=swap" rel="stylesheet">
+    <style>
+        .side-bar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-bar ul li {
+            position: relative;
+        }
+
+        .side-bar ul li a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #333;
+        }
+
+        .side-bar ul li a:hover {
+            background: #fd901b;
+        }
+
+        .side-bar ul li .sub-menu {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .side-bar ul li.active .sub-menu {
+            display: block;
+        }
+
+        .side-bar ul li .sub-menu li a {
+            padding: 5px;
+        }
+        .container mt-5{
+          margin-top: -12rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="checkbox">
+    <header class="header">
+        <h2 class="u-name">SIDE <b>BAR</b>
+            <label for="checkbox">
+                <i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+        </h2>
+        <i class="fa fa-user" aria-hidden="true"></i>
+    </header>
+    <div class="body">
+        <nav class="side-bar">
+            <div class="user-p">
+                <img src="img/users.jpg" alt="User">
+                <h4>User</h4>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">View Stats</a></li>
+                        <li><a href="#">Analytics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span>Employee</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add Employee</a></li>
+                        <li><a href="#">View Employees</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                        <span>Manage Booking</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">New Bookings</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                        <span>Promotional</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Create Promo</a></li>
+                        <li><a href="#">View Promos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <span>Contact</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add Contact</a></li>
+                        <li><a href="#">View Contacts</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-users-cog" aria-hidden="true"></i>
+                        <span>Manage User</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add User</a></li>
+                        <li><a href="#">Edit User</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                        <span>View Feedback</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">New Feedback</a></li>
+                        <li><a href="#">Archived Feedback</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span>Reports</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Daily Reports</a></li>
+                        <li><a href="#">Monthly Reports</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="section-1">
+         
+              <title>Edit Schedule</title>
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+              <style>
+                  @import url('https://fonts.googleapis.com/css2?family=Lemon+Milk&display=swap');
+          
+                  body {
+                      background: linear-gradient(120deg, #ffecb3, #ffb74d);
+                      font-family: 'Lemon Milk', sans-serif;
+                      color: #333;
+                      padding: 20px;
+                  }
+          
+                  h1 {
+                      color: #ff9800;
+                      text-align: center;
+                      margin-bottom: 30px;
+                  }
+          
+                  form {
+                      background-color: #fff;
+                      border-radius: 10px;
+                      padding: 20px;
+                      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                      margin-bottom: 30px;
+                  }
+          
+                  label {
+                      font-weight: bold;
+                      color: #ff9800;
+                  }
+          
+                  select, button, input {
+                      border: 2px solid #ff9800;
+                      border-radius: 10px;
+                      padding: 10px;
+                      margin-bottom: 15px;
+                      width: 100%;
+                      transition: box-shadow 0.3s, border-color 0.3s;
+                  }
+          
+                  select:focus, input:focus {
+                      box-shadow: 0 0 10px rgba(255, 152, 0, 0.8);
+                      border-color: #e65100;
+                  }
+          
+                  button,btn-primary {
+                      background-color: #ff9800;
+                      color: white;
+                      border: none;
+                      cursor: pointer;
+                      transition: background-color 0.3s;
+                  }
+          
+                  button:hover {
+                      background-color: #e65100;
+                  }
+          
+                  .placeholder {
+                      text-align: center;
+                      margin-bottom: 20px;
+                      padding: 20px;
+                      border: 2px dashed #ff9800;
+                      border-radius: 10px;
+                      background-color: rgba(255, 224, 178, 0.5);
+                      color: #555;
+                      font-style: italic;
+                  }
+              </style>
+          </head>
+          <body>
+              <div class="container mt-5">
+                  <h1>Edit Schedule</h1>
+          
+                
+          
+                  <form>
+                      <!-- Dynamic part commented out -->
+                      <!-- <form action="{{ route('schedules.update', $schedule->id) }}" method="POST"> -->
+                      <!-- @csrf -->
+                      <!-- @method('PUT') -->
+          
+                      <div class="mb-3">
+                          <label for="trip_id" class="form-label">Trip</label>
+                          <select name="trip_id" id="trip_id" class="form-control">
+                              <!-- @foreach ($trips as $trip) -->
+                              <!-- <option value="{{ $trip->id }}" {{ $trip->id == $schedule->trip_id ? 'selected' : '' }}>{{ $trip->id }}</option> -->
+                              <!-- @endforeach -->
+                              <option value="1">Sample Trip 1</option>
+                              <option value="2">Sample Trip 2</option>
+                          </select>
+                      </div>
+          
+                      <div class="mb-3">
+                          <label for="driver_id" class="form-label">Driver</label>
+                          <select name="driver_id" id="driver_id" class="form-control">
+                              <!-- @foreach ($drivers as $driver) -->
+                              <!-- <option value="{{ $driver->id }}" {{ $driver->id == $schedule->driver_id ? 'selected' : '' }}>{{ $driver->name }}</option> -->
+                              <!-- @endforeach -->
+                              <option value="1">Sample Driver 1</option>
+                              <option value="2">Sample Driver 2</option>
+                          </select>
+                      </div>
+          
+                      <div class="mb-3">
+                          <label for="status" class="form-label">Status</label>
+                          <select name="status" id="status" class="form-control">
+                              <!-- Dynamic options commented out -->
+                              <!-- <option value="active" {{ $schedule->status === 'active' ? 'selected' : '' }}>Active</option> -->
+                              <!-- <option value="inactive" {{ $schedule->status === 'inactive' ? 'selected' : '' }}>Inactive</option> -->
+                              <option value="active">Active</option>
+                              <option value="inactive">Inactive</option>
+                          </select>
+                      </div>
+          
+                      <!-- Uncomment button for backend integration -->
+                      <!-- <button type="submit" class="btn btn-primary">Update</button> -->
+                      <button type="button" class=" btn-primary">Update</button>
+                  </form>
+              </div>
+          
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      
+          
+    
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu(element) {
+            const parentLi = element.parentElement;
+            parentLi.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

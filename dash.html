@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lemon+Milk&display=swap" rel="stylesheet">
+    <style>
+        .side-bar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-bar ul li {
+            position: relative;
+        }
+
+        .side-bar ul li a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #333;
+        }
+
+        .side-bar ul li a:hover {
+            background: #fd901b;
+        }
+
+        .side-bar ul li .sub-menu {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .side-bar ul li.active .sub-menu {
+            display: block;
+        }
+
+        .side-bar ul li .sub-menu li a {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="checkbox">
+    <header class="header">
+        <h2 class="u-name">SIDE <b>BAR</b>
+            <label for="checkbox">
+                <i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+        </h2>
+        <i class="fa fa-user" aria-hidden="true"></i>
+    </header>
+    <div class="body">
+        <nav class="side-bar">
+            <div class="user-p">
+                <img src="img/users.jpg" alt="User">
+                <h4>User</h4>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">View Stats</a></li>
+                        <li><a href="#">Analytics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span>Employee</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add Employee</a></li>
+                        <li><a href="#">View Employees</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                        <span>Manage Booking</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">New Bookings</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                        <span>Promotional</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Create Promo</a></li>
+                        <li><a href="#">View Promos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <span>Contact</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add Contact</a></li>
+                        <li><a href="#">View Contacts</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-users-cog" aria-hidden="true"></i>
+                        <span>Manage User</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add User</a></li>
+                        <li><a href="#">Edit User</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                        <span>View Feedback</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">New Feedback</a></li>
+                        <li><a href="#">Archived Feedback</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span>Reports</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Daily Reports</a></li>
+                        <li><a href="#">Monthly Reports</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="section-1">
+            <!-- <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Available Buses</title> -->
+                <!-- Bootstrap CSS -->
+              
+                <style>
+                    body {
+                        background-color: #fffaf0; /* Soft cream background */
+                        font-family: 'Lemon Milk', sans-serif;
+                    }
+                  
+                    .card {
+                        border-radius: 10px;
+                        border: 1px solid #e3e6f0;
+                        transition: transform 0.2s;
+                        background-color: #fff;
+                    }
+            
+                    .card:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                    }
+            
+                    .card-title {
+                        font-weight: bold;
+                        color: #FFD700; /* Golden accent */
+                    }
+            
+                    .btn-golden {
+                        background-color: #FFD700;
+                        border-color: #FFD700;
+                        color: white;
+                    }
+            
+                    .btn-golden:hover {
+                        background-color: #e6be00;
+                        border-color: #e6be00;
+                    }
+            
+                    .btn-edit {
+                        background-color: #FFD700;
+                        border-color: #FFD700;
+                        color: white;
+                        height: 2rem;
+                        width: 4.3rem;
+                    }
+            
+                    .btn-edit:hover {
+                        background-color: #e6be00;
+                        border-color: #e6be00;
+                    }
+            
+                    .btn-delete {
+                        background-color: #FF6347; /* Orangish Red */
+                        border-color: #FF6347;
+                        color: white;
+                        height: 2rem;
+                        width: 4.3rem;
+                    }
+            
+                    .btn-delete:hover {
+                        background-color: #e5533b;
+                        border-color: #e5533b;
+                    }
+            
+                    input.form-control {
+                        border-radius: 20px;
+                    }
+            
+                    input.form-control:focus {
+                        box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+                        border-color: #FFD700;
+                    }
+            
+                    .no-data-img {
+                        width: 150px;
+                    }
+                     .container{
+                        margin-top: -12rem;
+                     }
+                    .header {
+                        text-align: center;
+                        margin: 20px 0;
+                        color: #FFD700;
+                    }
+            
+                    .header h1 {
+                        font-size: 3rem;
+                        font-weight: bold;
+                    }
+            
+                    .placeholder {
+                        color: #bbb;
+                        text-align: center;
+                        margin: 20px 0;
+                    }
+            
+                    .illustration {
+                        text-align: center;
+                        margin: 40px 0;
+                    }
+            
+                    .illustration img {
+                        max-width: 300px;
+                    }
+            
+                    .placeholder-card {
+                        margin: 20px auto;
+                        padding: 20px;
+                        border-radius: 10px;
+                        background-color: #FFF5CC;
+                        text-align: center;
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                    }
+            
+                    .placeholder-card h2 {
+                        color: #e6be00;
+                    }
+            
+                    .placeholder-card p {
+                        color: #aaa;
+                    }
+            
+                    .footer {
+                        margin-top: 40px;
+                        text-align: center;
+                        color: #FFD700;
+                    }
+            
+                    .footer a {
+                        color: #FFD700;
+                        text-decoration: underline;
+                    }
+            
+                    .footer a:hover {
+                        color: #e6be00;
+                        text-decoration: none;
+                    }
+            
+                    @media (max-width: 576px) {
+                        .table thead {
+                            display: none;
+                        }
+            
+                        td[data-label] {
+                            display: block;
+                            text-align: right;
+                            padding-left: 50%;
+                            position: relative;
+                        }
+            
+                        td[data-label]::before {
+                            content: attr(data-label);
+                            position: absolute;
+                            left: 0;
+                            width: 45%;
+                            text-align: left;
+                            font-weight: bold;
+                            color: #555;
+                        }
+                    }
+            
+                    @media (min-width: 992px) {
+                        .btn-edit, .btn-delete {
+                            margin-right: 10px;
+                        }
+            
+                        .btn-edit:last-child, .btn-delete:last-child {
+                            margin-right: 0;
+                        }
+            
+                        td {
+                            vertical-align: middle;
+                        }
+            
+                        .btn-edit, .btn-delete {
+                            min-width: 100px;
+                        }
+                    }
+                </style>
+            <!-- </head>
+            <body> -->
+            <div class="container">
+                <div class="header">
+                    <h1>Available Trips</h1>
+                </div>
+                <div class="text-end mb-3">
+                    <button class="btn btn-golden">Create Trip (Placeholder)</button>
+                </div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Route</th>
+                            <th>Departure Time</th>
+                            <th>Arrival Time</th>
+                            <th>Price</th>
+                            <th>Capacity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Static rows as placeholders -->
+                        <tr>
+                            <td data-label="ID">1</td>
+                            <td data-label="Route">Origin - Destination</td>
+                            <td data-label="Departure Time">08:00 AM</td>
+                            <td data-label="Arrival Time">12:00 PM</td>
+                            <td data-label="Price">$50</td>
+                            <td data-label="Capacity">40</td>
+                            <td data-label="Actions">
+                                <button class="btn btn-edit">Edit</button>
+                                <button class="btn btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">2</td>
+                            <td data-label="Route">Origin - Destination</td>
+                            <td data-label="Departure Time">09:00 AM</td>
+                            <td data-label="Arrival Time">01:00 PM</td>
+                            <td data-label="Price">$60</td>
+                            <td data-label="Capacity">50</td>
+                            <td data-label="Actions">
+                                <button class="btn btn-edit">Edit</button>
+                                <button class="btn btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">3</td>
+                            <td data-label="Route">Origin - Destination</td>
+                            <td data-label="Departure Time">10:00 AM</td>
+                            <td data-label="Arrival Time">02:00 PM</td>
+                            <td data-label="Price">$70</td>
+                            <td data-label="Capacity">60</td>
+                            <td data-label="Actions">
+                                <button class="btn btn-edit">Edit</button>
+                                <button class="btn btn-delete">Delete</button>
+                            </td>
+                        </tr>
+            
+                        <!-- Dynamic rows functionality (commented out) -->
+                        <!-- 
+                        <script>
+                            // Placeholder for dynamic trip data from backend
+                            const trips = [
+                                { id: 1, route: "Origin - Destination", departureTime: "08:00 AM", arrivalTime: "12:00 PM", price: "$50", capacity: 40 },
+                                { id: 2, route: "Origin - Destination", departureTime: "09:00 AM", arrivalTime: "01:00 PM", price: "$60", capacity: 50 },
+                                { id: 3, route: "Origin - Destination", departureTime: "10:00 AM", arrivalTime: "02:00 PM", price: "$70", capacity: 60 }
+                            ];
+            
+                            // Populate table dynamically
+                            const tableBody = document.querySelector('tbody');
+                            tableBody.innerHTML = '';
+                            trips.forEach(trip => {
+                                const row = `
+                                    <tr>
+                                        <td data-label="ID">${trip.id}</td>
+                                        <td data-label="Route">${trip.route}</td>
+                                        <td data-label="Departure Time">${trip.departureTime}</td>
+                                        <td data-label="Arrival Time">${trip.arrivalTime}</td>
+                                        <td data-label="Price">${trip.price}</td>
+                                        <td data-label="Capacity">${trip.capacity}</td>
+                                        <td data-label="Actions">
+                                            <button class="btn btn-edit">Edit</button>
+                                            <button class="btn btn-delete">Delete</button>
+                                        </td>
+                                    </tr>
+                                `;
+                                tableBody.innerHTML += row;
+                            });
+                        </script>
+                        -->
+                    </tbody>
+                </table>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- </body>
+            </html> -->
+            
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu(element) {
+            const parentLi = element.parentElement;
+            parentLi.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lemon+Milk&display=swap" rel="stylesheet">
+    <style>
+        .side-bar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-bar ul li {
+            position: relative;
+        }
+
+        .side-bar ul li a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #333;
+        }
+
+        .side-bar ul li a:hover {
+            background: #fd901b;
+        }
+
+        .side-bar ul li .sub-menu {
+            display: none;
+            list-style: none;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .side-bar ul li.active .sub-menu {
+            display: block;
+        }
+
+        .side-bar ul li .sub-menu li a {
+            padding: 5px;
+        }
+        .container mt-5{
+          margin-top: -12rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="checkbox">
+    <header class="header">
+        <h2 class="u-name">SIDE <b>BAR</b>
+            <label for="checkbox">
+                <i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+        </h2>
+        <i class="fa fa-user" aria-hidden="true"></i>
+    </header>
+    <div class="body">
+        <nav class="side-bar">
+            <div class="user-p">
+                <img src="img/users.jpg" alt="User">
+                <h4>User</h4>
+            </div>
+            <ul>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">View Stats</a></li>
+                        <li><a href="#">Analytics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span>Employee</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add Employee</a></li>
+                        <li><a href="#">View Employees</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                        <span>Manage Booking</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">New Bookings</a></li>
+                        <li><a href="#">History</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                        <span>Promotional</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Create Promo</a></li>
+                        <li><a href="#">View Promos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-address-book" aria-hidden="true"></i>
+                        <span>Contact</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add Contact</a></li>
+                        <li><a href="#">View Contacts</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-users-cog" aria-hidden="true"></i>
+                        <span>Manage User</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add User</a></li>
+                        <li><a href="#">Edit User</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                        <span>View Feedback</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">New Feedback</a></li>
+                        <li><a href="#">Archived Feedback</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleMenu(this)">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                        <span>Reports</span>
+                        <i class="fa fa-chevron-down" style="margin-left:auto;"></i>
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Daily Reports</a></li>
+                        <li><a href="#">Monthly Reports</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <section class="section-1">
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fffaf0; /* Soft cream background */
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-top: 50px;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #FFD700; /* Golden accent */
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input.form-control, select.form-select {
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        input.form-control:focus, select.form-select:focus {
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+            border-color: #FFD700;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #e6be00;
+            border-color: #e6be00;
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Edit User</h1>
+    <form action="#" method="POST"> <!-- Dynamic action and method are placeholders -->
+        <!-- @csrf --> <!-- CSRF Token placeholder -->
+        <!-- @method('PUT') --> <!-- Method override placeholder -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="" placeholder="Enter user name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="" placeholder="Enter user email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" name="phone" value="" placeholder="Enter user phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="role" class="form-label">User Type</label>
+            <select class="form-select" id="role" name="role" required>
+                <option value="operation_officer">Operations Officer</option>
+                <option value="driver">Driver</option>
+                <option value="ticket_officer">Ticket Officer</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Update User</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu(element) {
+            const parentLi = element.parentElement;
+            parentLi.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
